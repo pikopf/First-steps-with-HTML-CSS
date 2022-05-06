@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Josefin Slab", serif;
+  font-size: 16 px;
+  --link-selection: grey;
+  --hire-me-background: rgb(242, 121, 141);
+}
+
+main {
+  padding: 10rem;
+  margin: 1rem;
+}
+
+/**@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
+}**/
+
+h1 {
+  color: white;
+  font-size: 0.1px;
+  font-family: "Sacramento", cursive;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.PiasCV {
+  padding: 1rem;
+  padding-right: 1rem;
+  border: 5px; /**solid red**/
+  height: 90px;
+  display: flex;
+  align-items: centre;
+}
+
+div {
+  margin-top: 0;
+  border: 1px; /**solid black**/
+  font-size: 45pt;
+  font-family: "Sacramento", cursive;
+  color: white;
+  display: flex;
+  justify-content: centre;
+}
+
+.div1 {
+  padding-right: 1rem;
+}
+
+.mermaid {
+  z-index: 2;
+  display: flex;
+  position: static;
+  background-color: transparent;
+  transition: 1s;
+}
+
+.mermaid:hover {
+  transform: rotate(2000deg);
+}
+
+.PiasCV:hover .mermaid {
+  transform: translate(60rem) rotate(2000deg);
+  transform: scale(5) .hire-me;
+}
+
+.profession {
+  color: white;
+}
+
+h2 {
+  color: black;
+  font-size: 45pt;
+  font-family: "Sacramento", cursive;
+}
+
+body {
+  margin: 0;
+}
+
+::selection {
+  background-color: var(--link-selection, grey);
+  color: white;
+}
+
+/**************************************************************/
+/* Specific Stylings */
+
+.header1 {
+  padding: 5rem;
+  padding-top: 4.5rem;
+  text-align: center;
+  background-image: linear-gradient(rgb(231, 70, 96) 20%, pink 90%);
+}
+
+.heading-group {
+  font-size: 4rem;
+}
+
+.profession {
+  font-size: 0.25em;
+}
+
+.hire-me {
+  z-index: 1;
+  position: fixed;
+  right: 16px;
+  top: 16px;
+  padding: 8px;
+  border-radius: 4px;
+  background: var(--hire-me-background, red);
+  color: white;
+  transform-origin: 50% 50%;
+  transition: transform 1s;
+}
+
+.hire-me:hover {
+  transform: rotate(2000deg);
+}
+
+.header:hover .hire-me {
+  transform-origin: 100% 10%;
+  transform: scale(5);
+}
+
+.shadow:hover .hire-me {
+  transform: rotate(2000deg);
+}
+
+@media print {
+  .navigation {
+    display: none;
+  }
+}
+
+.navigation {
+  background-image: linear-gradient(pink 100%, rgb(231, 70, 96) 90%);
+  align-items: center;
+  position: sticky;
+  top: 0%;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+a:link {
+  color: rgb(76, 187, 193);
+}
+a:visited {
+  color: blanchedalmond;
+}
+
+a:hover {
+  color: rgb(255, 106, 0);
+  background-color: white;
+}
+
+a:active {
+  color: red;
+  background-color: rgb(120, 85, 135);
+}
+
+.main {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.main > * + * {
+  margin-top: 3rem;
+}
+
+.main > * {
+  border-top: 0.125rem solid grey;
+  padding: 0 1rem;
+}
+
+.main > *:first-child {
+  border-top: none;
+}
+
+.article-heading {
+  position: relative;
+  padding-top: 175px;
+  left: -1rem;
+  z-index: -1;
+}
+
+.experience-header {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .main > * + * {
+    margin-top: 5rem;
+  }
+
+  .nav-link + .nav-link {
+    margin-left: 1rem;
+  }
+  .experience-header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navigation {
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 17px;
+  }
+}
+
+.experience-heading {
+  display: inline-block;
+}
+
+.experience-subheading {
+  display: inline-block;
+}
+
+#Kontakt {
+  margin-right: 0;
+  background-image: linear-gradient(transparent 50%, pink 80%);
+  padding: 5rem;
+  padding-top: 4.5rem;
+  padding-bottom: 10rem;
+}
